@@ -1,0 +1,64 @@
+div.parent{
+    @extend.common_parent_prop;
+    padding: 50px 0;
+    @media (max-width: 768px) {
+        margin-top: 10px;
+    };
+    
+    div.header-image{
+        text-align: center;
+        img{
+            width:50%;
+        };
+    };
+    
+    div.header-text{
+        background: $header-bg-clr;
+        padding: 40px;
+        text-align: center;
+        font-size: $font35;
+        margin: 50px 0;
+    };
+    
+    div.search-bar-parent{
+        text-align: center;
+        div.search-bar-child{
+            position: relative;
+            width: 60%;
+            margin: 0 auto;
+            @media (max-width: 768px) {
+                width: 90%;
+            };
+            span.search-icon{
+                top: 30px;
+                left: 8px;
+            };
+            input{
+                padding: 30px 50px;
+                font-size: $font32;
+                background: $parent-bg-clr;
+                border: 2px solid $white-clr;
+                @include border-radius(50px);
+                color: $white-clr;
+                display: inline-block;
+                text-align: center;
+                outline: none;
+                text-transform: uppercase;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 100%;
+                
+                @media (max-width: 768px) {
+                    font-size: 25px;
+                };
+            };
+        };
+    };
+    
+    div.information{
+        font-size: $font35;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 50px 0 0 0;
+    };
+};
